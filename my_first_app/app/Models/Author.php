@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-// У файлі app/Models/Book.php
+// У файлі app/Models/Author.php
 
-class Book extends Model
+class Author extends Model
 {
-    public function author()
+    public function books()
     {
-        return $this->belongsTo(Author::class);
+        return $this->hasMany(Book::class);
     }
 }
